@@ -1,0 +1,709 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+/*480px se acomoda par pantalla de celular, 768px para una tablet, 1140px o 1400px para una laptop o computadora de escritorio*/
+/*seudo elemtos*/
+:root {
+  --blanco: #f9e3f1;
+  --oscuro: #212121;
+  --primario: #f379c6;
+  --secundario: #a7007a;
+  --gris: #757575;
+} /*SE DENOMINANA VARIABLES EN CSS y es una paleta de colores*/
+
+/*GLOBALES*/
+html {
+  font-size: 62.5%; /*reiniciamos el tamaño a ese porcentaje */
+  box-sizing: border-box; /*HACK PARA BOX MODEL*/
+  scroll-snap-type: y mandatory; /*esfecto scroll "y" es para arriba y la abajo - "x" para los lados */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; /* DESACE LA PROPIEDAD DE BOX MODEL*/
+}
+
+body {
+  font-size: 16px; /* 1rem=10px */
+  font-family: "Krub", sans-serif;
+  background-image: linear-gradient(
+    to top,
+    #dfe9f3 0%,
+    var(--blanco) 100%
+  ); /*hacer degrades el fondo de la pagina de abajo para arriba al utilizar to top*/
+}
+
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1rem 3rem; /*agrega espascio en todo el contorno*/
+  margin-top: 3rem; /*separa el boton del texto anterior*/
+  font-size: 2rem; /*tamaño de fuente*/
+  text-decoration: none; /*saca la linea de subrayado porque es un enlace*/
+  text-transform: uppercase; /*MAYUSCULA*/
+  font-weight: bold; /*NEGRITA*/
+  border-radius: 0.5rem; /*esquina redondeada*/
+  width: 90%; /*agrandar el boton cuando es responsivo y la pantalla es pequeña*/
+  text-align: center; /*centra el texto*/
+  border: none;
+}
+
+.boton i{
+  padding: 1rem 1rem;
+}
+
+@media (min-width: 780px) {
+  .boton {
+    width: auto;
+  }
+ 
+}
+
+.boton:hover {
+  cursor: pointer;
+}
+
+.sombra {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-size: 3.8rem; /*euqivale a 38 px- los rem se adaptan mejor a muchos navegadores*/
+}
+
+h2 {
+  font-size: 2.8rem; /*equivale 28px- los rem se adaptan mejor a muchos navegadores*/
+}
+
+h3 {
+  font-size: 1.8rem; /*equivale a 18px- los rem se adaptan mejor a muchos navegadores*/
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  /*color:var(--primario) se llama a la variable antes creada*/
+}
+
+/* Titulos*/
+
+.titulo span {
+  font-size: 2rem;
+  color: var(--blanco);
+}
+.titulo{
+  color: var(--blanco);
+}
+.titulos{
+  padding: 15px;
+}
+
+.subtitulo{
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-decoration: dotted;
+}
+
+@media (min-width: 350px) {
+  .titulo{
+    top:25px;
+  }
+}
+
+/* Utilidades*/
+.w-sm-100 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-sm-100 {
+    width: auto;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.alinear-derecha {
+  justify-content: flex-end;
+  margin-top: 5rem;
+}
+
+.contenedor {
+  max-width: 120rem;
+  /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; *este codigo es lo mismo que el codigo margin solo*/
+  margin: 0 auto;
+}
+
+/*Navegacion Principal*/
+.nav-bg {
+  background-color: var(--secundario);
+  position: sticky;
+  top: 0;
+}
+
+.navegacion-principal {
+  display: flex; /*los elemnos se muestra de izquierda a derecha*/
+  flex-direction: column;
+  /*background-color: var(--secundario);*/
+  /*z-index: 1000;*/
+  /*width: 100%;
+    max-width: 1000px;
+    box-shadow: 0px 4px 3px rgba(0,0,0,.5);*/
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal {
+    flex-direction: row; /*se muestra en columna*/
+    justify-content: space-between; /*centra horizontalmente*/
+  }
+}
+/*overflow: hidden; en el contenedor padre y float: left; en el contedor hijo hace que se coloquen uno al lado el otro los campos*/
+.navegacion-principal a {
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+/*@media (min-width: 768px) {
+} 480px se acomoda par pantalla de celular, 768px para una tablet, 1140px o 1400px para una laptop o computadora de escritorio*/
+
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+}
+
+/*PORTADA*/
+.hero {
+  background-image: url(../img/actividades3.webp);
+  background-repeat: no-repeat; /*con esta propiedad la imagen no se repite por defaul*/
+  background-size: cover; /*la imagen cubre toda la pantalla*/
+  height: 700px;
+  position: relative;
+  margin-bottom: 2rem; /*para separar la imagen de el cuadro que le sigue*/
+
+}
+
+.contenido-hero{
+  position: absolute;
+  background-color: rgba(0, 0, 0,.5);/*ejemplo*/
+  background-color: rgb(0 0 0 / 70%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;/*sirve para ocultar los elementos que estan fuera del padre*/  
+  /*animation: cambio 20s infinite;*/
+
+  display: flex; /*este bloque de codigo permite alinear verticalmente y centrado*/
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.contenido-hero p{
+  color: var(--blanco);
+}
+
+.contenido-hero h2{
+  color: var(--blanco);
+  margin-top: 4rem;
+}
+
+.contenido-hero .ubicacion{
+  display: flex;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+/*SERVICIOS*/
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    /*grid-template-columns: 33.3% 33.3% 33.3%; es 33.3 porque es el 100 dividido 3
+        grid-template-columns: 1fr 1fr 1fr; es 1fr una fraccion*/
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /*es que repita una fraccion 3 veces*/
+    /*grid-template-rows: 200px 800px;*/
+    column-gap: 1rem; /*determina el espacio entre columnas*/
+
+    /*grid: 200px 800px / 300px 300px; version corta de las lineas de codico anteriores*/
+  }
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio h3 {
+  color: var(--secundario);
+  font-weight: normal;
+}
+
+.servicio p {
+  line-height: 2;
+  text-align: left;
+}
+
+.servicio .iconos {
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--primario);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/*Galeria*/
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3,1fr); /*aqui indicamos que va a contar de 3 columnas iguales*/
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap:10px;/*da un espaciado entre cada columna*/
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /*object-fit: cover; propiedad que se usa para que la imagen no se distorcione*/
+}
+
+.galeria li {
+  margin: 17px;
+  bottom: 0;
+  color: var(--oscuro);
+  background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0));
+  width: 300px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.galeria li:hover {
+  transform: scale(1.3);/*efecto de la imagen al pasar sobre la imagen*/
+}
+
+.galeria img {
+  width: 250px;
+  height: 200px;
+}
+
+/*Estilos del modal*/
+
+.modal {
+  display: none;
+}
+
+.modal:target {
+  display: block;
+  position: fixed;
+  background: rgb(0, 0, 0, 0.8);
+  top: 8rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal h3 {
+  color: #dfe9f3;
+  font-size: 30px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.imagen {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen a {
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.imagen a:nth-child(2) {
+  margin: 0;
+  height: 100%;
+  flex-shrink: 2; /*proporcion de reduccion*/
+}
+
+.imagen img {
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+  border: 7px solid #fff;
+  box-sizing: border-box;
+}
+
+.cerrar {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 15px auto;
+  text-align:center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  line-height: 25px;
+}
+/*TESTIMONIOS*/
+
+.testimonio_contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /*propiedad que se usa para que cuando la pantalla es pequeña el texte sea resposivo*/
+  width: 100%;
+}
+
+.testimonios_caja {
+  width: 500px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--blanco);
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.perfil_imagen {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.perfil_imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: center; /*como el contenido de un elemento una video o una imagen debe redimencionarse para que se ajuste a su contenedor*/
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+}
+
+.name_user {
+  display: flex;
+  flex-direction: column;
+}
+
+.name_user strong {
+  color: var(--oscuro);
+  font-size: 1.3rem;
+}
+
+.name_user span {
+  color: var(--gris);
+  font-size: 1.1rem;
+}
+
+
+.comentarios_clientes p {
+  color: var(--oscuro);
+  line-height: 2;/*interlineado 2*/
+  text-align: left;
+}
+
+/**CONTACTO**/
+
+.formulario {
+  background-color: var(--gris);
+  width: min(
+    60rem,
+    100%
+  ); /**es utilizar el valor mas pequeño- es para darle el tamaño al formulario*/
+  margin: 0 auto; /* se usa para centrar cuando no tenes un display-flex y seo un tipo de elemento block*/
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+/*.formulario legend {
+  text-align: right;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primario);
+}*/
+
+@media (min-width: 768px) {
+  .contenedor-campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem;
+  }
+
+  .campo:nth-child(3), /*seudo selector (nth-child) que nos facilita seleccioner la clase "campo" que necesitamos, sin tener que crear otra clase*/
+    .campo:nth-child(4) {
+    /*.campo que esta en la posicion 4y3- asi se lee ambos seudo selectores*/
+    grid-column: 1 / 3;
+  }
+}
+.contenedor-campos legend{
+  font-size: 1.8rem;
+  /*text-transform: uppercase; propiedad para hacer toda mayuscula*/
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  color: var(--primario);
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.campo textarea {
+  height: 20rem;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/*Boton WhastApp*/
+.float {
+  position: fixed;
+  /*    width: 260px;
+    height: 260px;*/
+  bottom: 15px;
+  right: 15px;
+  /*background-color: #25d366;*/
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 300;
+}
+
+.float:hover {
+  text-decoration: none;
+  color: #25d366;
+  /*background-color: #fff;*/
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+  .float {
+    /* font-size: 24px; */
+    display: none !important;
+  }
+}
+
+.float1 {
+  position: fixed;
+  /*    width: 260px;
+  height: 260px;*/
+  bottom: 15px;
+  right: 15px;
+  /*background-color: #25d366;*/
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 300;
+}
+
+.float1:hover {
+  text-decoration: none;
+  color: #25d366;
+  /*background-color: #fff;*/
+}
+
+.my-float1 {
+  margin-top: 16px;
+}
+
+@media (max-width: 1100px) {
+  .float1 {
+    /* font-size: 24px; */
+    bottom: 15px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .float1 {
+    /* font-size: 24px; */
+    display: none !important;
+  }
+}
+
+/*Pie de Pagina*/
+.pie-pagina {
+  width: 100%;
+  background-color: var(--secundario);
+  margin-top: 2rem;
+}
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+  text-align: center;
+}
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img {
+  width: 250px;
+}
+.pie-pagina .grupo-1 .box h2 {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+.pie-pagina .grupo-1 .box .link {
+  color: #efefef;
+  /*margin-bottom: 5px;*/
+  font-size: 17px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pie-pagina .grupo-1 .box h1 {
+  color: #efefef;
+}
+
+.pie-pagina .grupo-1 .box .tamaño {
+  font-size: 2rem;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  margin-right: 10px;
+  background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));/*transparente*/
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: var(--blanco);
+  transform: scale(2);
+}
+
+
+.pie-pagina .grupo-2 {
+  background-color: var(--secundario);
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 .box p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+
+.bars__menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(6);
+  cursor: pointer;
+}
+
+.bars__menu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #9a00bf;
+  margin-top: 6px;
+  transform-origin: 0px 100%;
+  transition: all 300ms;
+}
+
+.activeline1__bars-menu {
+  transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activeline2__bars-menu {
+  opacity: 0;
+  margin-left: -30px;
+}
+
+.activeline3__bars-menu {
+  transform: rotate(-45deg) translate(-4px, 2px);
+}

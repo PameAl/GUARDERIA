@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseñador Freelancer</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/syles.css" as="style">
+    <link href="css/syles.css" rel="stylesheet">
+	<!--<script src="carrusel.js"></script>-->
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container__menu">
+          <div class="logo">
+            <h1 class="titulo footer">"Pequeños Tesoros"<span>Guardería</span></h1>
+          </div>
+          <div class="menu">
+            <i class="fas fa-bars" id="btn_menu"></i>
+            <div id="back_menu"></div>
+            <nav id="nav">
+              <ul>
+                <li><a href="#Inicio" id="selected">Inicio</a></li>
+                <li><a href="#MiServicios">Servicios</a></li>
+                <li><a href="#Testimonios">Testimonios</a></li>
+                <li><a href="#Galeria">Galeria</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <section class="hero" id="Inicio">
+        <div class="contenido-hero">
+            <h2 class="titulo">"Un lugar de ternura y descubrimiento"</h2>
+            <div class="ubicacion"> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="54" height="54" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="11" r="3" />
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+               <p>Rioja Nº 437, Villa del Rosario, Cordoba</p>
+          </div>
+           
+            <a target="_blank" class="boton" href="https://api.whatsapp.com/send/?phone=5493573495356&amp;text=Hola,%20estoy%20interesado/a%20en%20conocer%20más%20sobre%20sus%20productos/servicios.%20¿Podrían%20brindarme%20más%20información,%20por%20favor?"
+            id="HrefWhatsapp3">Contáctanos</a>
+
+            
+        </div> contenido-hero (asi se comenta)
+
+        
+    </section>    
+    
+   <main class="contenedor sombra"> 
+        
+        <h2 class="titulos" id="MiServicios">Nuestros Servicios</h2>
+
+        <div class="servicios">
+            
+        <section class="servicio">
+
+            <div class="iconos">
+                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path>
+				  </svg>
+            </div>
+            <h3 class="subtitulo" >Educación</h3>
+            <p>Contamos con salas adaptadas a diferentes etapas de crecimiento: Lactantes(3 a 12 meses), Gateadores(12 a 24 meses) y Preescolares(2 a 4 años).
+               Nuestro equipo de educadores calificados implementa un currículo adaptado a la edad y las necesidades individuales de los niños. 
+               Utilizamos una combinación de actividades lúdicas, juegos educativos, arte, música y movimiento para estimular su desarrollo integral. ¡Acompañamos a los niños en cada etapa de su crecimiento!</p>
+        
+        </section>
+
+        <section class="servicio">
+            
+            <div class="iconos">
+                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"></path>
+				  </svg>
+
+				  <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"></path>
+				  </svg>
+            </div>
+            <h3 class="subtitulo">Talleres Creativos</h3>
+            <p>Nuestros creativos brindan a los niños la oportunidad de explorar su imaginación y desarrollar habilidades artísticas. 
+               A través de actividades como pintura, modelado, música y manualidades, fomentamos su creatividad, coordinación motora y expresión emocional. 
+               Los talleres les permiten disfrutar, experimentar y aprender de manera divertida y enriquecedora. ¡Descubrirán un mundo de colores y formas mientras desarrollan su creatividad!</p>
+        </section>
+
+        <section class="servicio">
+            
+            <div class="iconos">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+				  </svg> 
+            </div>
+            <h3 class="subtitulo">Terapia Grupal</h3>
+            <p>La terapia grupal para niños es un tipo de terapia psicológica que se lleva a cabo con un grupo de dos o más personas. 
+			         Este es un espacio de interacción social en el cual se les permite adquirir herramientas personales a través de los aprendizajes y experiencias de los demás participantes.
+               Además, les ayuda a fortalecer la empatía, la comunicación, la resolución de conflictos y a compartir experiencias y perspectivas, promoviendo un crecimiento personal y emocional.</p>
+        
+               <a target="_blank" class="boton" href="La terapia grupal para niños.pdf" download><i class="fa-regular fa-file-pdf"></i>Mas Información</a>
+            </section>
+                    
+    </div><!--.servicio-->
+
+    <section><!--Galeria-->
+      
+        <h2 class="titulos" id="Galeria">Galería</h2>
+     
+        <ul class="galeria">
+            <li><a href="#img1"><img src="img/actividades.webp"></a>Actividades</li>
+            <li><a href="#img5"><img src="img/Sala.webp"></a>Salas</li>
+            <li><a href="#img11"><img src="img/Patio.webp"></a>Patio</li>
+
+        </ul>
+
+        <!--Img Actividades-->
+        <div class="modal" id="img1">
+           <h3>Actividades</h3>
+           <div class="imagen">
+            <a href="#img4">&#60;</a>
+            <a href="#img2"><img src="img/actividades.webp"></a>
+            <a href="#img2">></a>
+           </div>
+           <a class="cerrar" href="#Galeria">x</a>
+        </div>
+
+        <div class="modal" id="img2">
+            <h3>Actividades</h3>
+            <div class="imagen">
+             <a href="#img1">&#60;</a>
+             <a href="#img3"><img src="img/actividades1.webp"></a>
+             <a href="#img3">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+         </div>
+
+         <div class="modal" id="img3">
+            <h3>Actividades</h3>
+            <div class="imagen">
+             <a href="#img2">&#60;</a>
+             <a href="#img4"><img src="img/actividades2.webp"></a>
+             <a href="#img4">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+         </div>
+
+         <div class="modal" id="img4">
+            <h3>Actividades</h3>
+            <div class="imagen">
+             <a href="#img3">&#60;</a>
+             <a href="#img1"><img src="img/actividades3.webp"></a>
+             <a href="#img1">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+         </div>
+        <!--FIN Img Activdades-->
+        <!--Img de Salas-->
+         <div class="modal" id="img5">
+            <h3>Sala</h3>
+            <div class="imagen">
+             <a href="#img9">&#60;</a>
+             <a href="#img6"><img src="img/Sala.webp"></a>
+             <a href="#img6">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+         </div>
+
+         <div class="modal" id="img6">
+            <h3>Sala</h3>
+            <div class="imagen">
+             <a href="#img5">&#60;</a>
+             <a href="#img7"><img src="img/Sala1.webp"></a>
+             <a href="#img7">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+         </div>
+
+         <div class="modal" id="img7">
+            <h3>Sala</h3>
+            <div class="imagen">
+             <a href="#img6">&#60;</a>
+             <a href="#img8"><img src="img/Sala2.webp"></a>
+             <a href="#img8">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+          </div>
+
+          <div class="modal" id="img8">
+             <h3>Sala</h3>
+            <div class="imagen">
+             <a href="#img7">&#60;</a>
+             <a href="#img9"><img src="img/Sala3.webp"></a>
+             <a href="#img9">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+          </div>
+        
+          <div class="modal" id="img9">
+            <h3>Sala</h3>
+            <div class="imagen">
+             <a href="#img8">&#60;</a>
+             <a href="#img5"><img src="img/Sala4.webp"></a>
+             <a href="#img5">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+          </div>
+        <!--Fin Img Salas-->
+        <!--Img Patio-->
+          <div class="modal" id="img10">
+            <h3>Patio</h3>
+            <div class="imagen">
+             <a href="#img12">&#60;</a>
+             <a href="#img11"><img src="img/Patio.webp"></a>
+             <a href="#img11">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+          </div>
+
+          <div class="modal" id="img11">
+            <h3>Patio</h3>
+            <div class="imagen">
+             <a href="#img10">&#60;</a>
+             <a href="#img12"><img src="img/Patio1.webp"></a>
+             <a href="#img12">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+          </div>
+
+          <div class="modal" id="img12">
+            <h3>Patio</h3>
+            <div class="imagen">
+             <a href="#img11">&#60;</a>
+             <a href="#img13"><img src="img/Patio2.webp"></a>
+             <a href="#img13">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+          </div>    
+
+          <div class="modal" id="img13">
+            <h3>Patio</h3>
+            <div class="imagen">
+             <a href="#img12">&#60;</a>
+             <a href="#img10"><img src="img/Patio3.webp"></a>
+             <a href="#img10">></a>
+            </div> 
+            <a class="cerrar" href="#Galeria">x</a>
+          </div> 
+          <!--FIN Img Patio-->
+    </section><!--Fin galeria-->
+
+    </section><!--Testimonios-->
+        <h2 class="titulos">Testimonios</h2>
+      <div class="testimonio_contenedor">
+        <!--Caja1-->
+        <div id="Testimonios" class="testimonios_caja">
+            <div class="caja_top">
+                <div class="perfil">
+                    <div class="perfil_imagen">
+                        <img src="img/TestimonioPapa1.webp" alt="">
+                    </div>
+                   <!--Nombre y usuario-->
+                   <div class="name_user">
+                    <strong>Juan Perez, padre de Martina - 1 año</strong>
+                    <span>@PerezJuan</span>
+                   </div>
+                </div>
+        </div>
+        <div class="comentarios_clientes">
+            <p>Encontrar una guardería de confianza para nuestra hija Martina fue una prioridad para nosotros, y estamos muy contentos de haberla elegido. 
+               El ambiente acogedor y las actividades estimulantes han ayudado en su desarrollo. Además, la comunicación cercana con los educadores nos mantiene informados sobre su progreso. 
+               Sin duda, ¡la guardería ha superado nuestras expectativas!</p>
+        </div>
+      </div>  
+       <!--Caja2-->
+       <div class="testimonios_caja">
+        <div class="caja_top">
+            <div class="perfil">
+                <div class="perfil_imagen">
+                    <img src="img/TestimonioMama1.webp" alt="">
+                </div>
+               <!--Nombre y usuario-->
+               <div class="name_user">
+                <strong>Patricia Tamagnini, madre de Lorenzo - 2 años </strong>
+                <span>@Tamagninipato</span>
+               </div>
+            </div>
+    </div>
+    <div class="comentarios_clientes">
+        <p>Estamos encantados con la experiencia de Lorenzo en la guardería. Desde el primer día, hemos visto cómo ha florecido su curiosidad y habilidades sociales. 
+           El equipo de cuidadores es excepcionalmente cálido y cariñoso, y nos da tranquilidad saber que nuestro hijo está en buenas manos. 
+           ¡Recomendamos esta guardería a todas las familias!</p>
+    </div>
+  </div>
+   <!--Caja3-->
+   <div class="testimonios_caja">
+    <div class="caja_top">
+        <div class="perfil">
+            <div class="perfil_imagen">
+                <img src="img/TestimonioPapa2.webp" alt="">
+            </div>
+           <!--Nombre y usuario-->
+           <div class="name_user">
+            <strong>Pedro Guzman, padre de Lucas - 18 meses</strong>
+            <span>@Guzmanpedro</span>
+           </div>
+        </div>
+</div>
+<div class="comentarios_clientes">
+    <p>No podríamos estar más felices con la guardería. 
+       Lucas se siente feliz y seguro cada vez que lo dejamos allí. El ambiente cálido y acogedor ha sido clave para que se adapte rápidamente. 
+       Además, la guardería ofrece un enfoque educativo centrado en el juego que ha estimulado su desarrollo de manera notable. ¡La guardería ha sido una gran elección para nuestra familia!</p>
+</div>
+</div>
+ <!--Caja4-->
+ <div class="testimonios_caja">
+    <div class="caja_top">
+        <div class="perfil">
+            <div class="perfil_imagen">
+                <img src="img/TestimonioMama2.webp" alt="">
+            </div>
+           <!--Nombre y usuario-->
+           <div class="name_user">
+            <strong>Silvina Jaime, madre de Sofía - 3 años</strong>
+            <span>@Jaimesil</span>
+           </div>
+        </div>
+       
+</div>
+<div class="comentarios_clientes">
+    <p>Como madre, quería una guardería que brindara un equilibrio entre cuidado y aprendizaje. 
+       Encontré eso y más en esta guardería. Sofía ha adquirido habilidades preescolares mientras se divierte. 
+       Además, la variedad de talleres creativos y la atención individualizada han ayudado a fomentar su confianza y creatividad. Estamos muy agradecidos por la dedicación del equipo.</p>
+</div>
+</div>
+
+    <section><!--Fin Testimonios-->
+
+        <section id="Contacto"><!--Contactos-->
+
+            <h2 class="titulos">Contacto</h2>
+            <form id="form" class="formulario" action="https://formsubmit.co/e686c7e1b2ae565e011852ee425c3332" method="POST" >
+                <fieldset>
+                
+                <div class="contenedor-campos">
+                    
+                    <div class="campo">
+                        <label for="name">Nombre<span>*</span></label>
+                        <input class="input-text" name="name" required type="text" id="name" placeholder="Tu Nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono<span>*</span></label>
+                        <input class="input-text" name="telefono" type="tel" id="telefono" required placeholder="Tu Teléfono">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo<span>*</span></label>
+                        <input class="input-text" name="email" type="text" id="email" required placeholder="Tu Email">
+                    </div>
+
+                    <div class="campo">
+                        <label for="message">Mensaje</label>
+           
+                        <textarea class="input-text" id="message" name="message" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <legend>*Llenar todos los campos</legend>
+                </div> <!--contenedor-campos-->
+
+                <div class="alinear-derecha flex">
+                    <button class="boton w-sm-100" type="submit">Enviar</button>
+                    
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                    
+                </div>
+
+                </fieldset>
+            </form>
+        </section><!--Fin Contacto-->
+    </main>
+   
+    <!--Boton WhatsApp-->
+  <a
+  href="https://api.whatsapp.com/send/?phone=5493573495356&amp;text=Hola,%20estoy%20interesado/a%20en%20conocer%20más%20sobre%20sus%20productos/servicios.%20¿Podrían%20brindarme%20más%20información,%20por%20favor?"
+  id="HrefWhatsapp2"
+  class="float"
+  target="_blank"
+  ><img src="img/wsppbtn.svg" width="256" height="auto"
+/></a>
+
+<a
+  href="https://api.whatsapp.com/send/?phone=5493573495356&amp;text=Hola,%20estoy%20interesado/a%20en%20conocer%20más%20sobre%20sus%20productos/servicios.%20¿Podrían%20brindarme%20más%20información,%20por%20favor?"
+  id="HrefWhatsapp3"
+  class="float1"
+  target="_blank"
+  ><img src="img/wsppbtn1.svg" width="64" height="64"
+/></a>
+<!--Fin Boton WhatsApp-->
+
+<!--Pie de Pagina-->
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+
+                    <h1 class="titulo footer">"Pequeños Tesoros"<span>Guardería</span></h1>
+            
+                </figure>
+        </div>
+
+        <div class="box">
+            <p class="link"><a target="_blank" class="link" href="https://www.google.com/maps/dir/-31.5544458,-63.5216022/La+Rioja+437,+Villa+del+Rosario,+C%C3%B3rdoba/@-31.5542332,-63.5402593,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94332a49873d328f:0xa42dbd5795e13730!2m2!1d-63.5392888!2d-31.5500313">Rioja Nº 437 </a> 
+               - Tel.: <a target="_blank" class="link" href="https://api.whatsapp.com/send/?phone=5493573495356&amp;text=Hola,%20estoy%20interesado/a%20en%20conocer%20más%20sobre%20sus%20productos/servicios.%20¿Podrían%20brindarme%20más%20información,%20por%20favor?" id="HrefWhatsapp3"> 3573495356</a>  - C.P.:5963</p>
+            <p class="link">Email: <a target="_blank" class="link" href="https://mail.google.com/mail/u/1/?ogbl#inbox"> pequeñostesorosguarderia@gmail.com</a> </p>
+            <p class="link">Villa del Rosario - Córdoba</p>
+            
+        </div>
+
+        <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+                <a target="_blank" href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                <a target="_blank" href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                <a target="_blank" href="https://twitter.com/?lang=es" class="fa fa-twitter"></a>
+                <a target="_blank" href="https://www.youtube.com/" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2023 <b>Pamela</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer><!--Fin Pie de pagina-->
+ 
+
+
+<!--<script src="carrusel.js"></script>-->
+
+<!--Enviar datod de formulario-->
+<script>
+ const $form = document.querySelector("#form");
+const $buttonMailto = document.querySelector("#form");
+
+$form.addEventListener("submit", handleSubmit);
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  const form = new FormData(this);
+  const response = await fetch(this.action, {
+    method: this.method,
+    body: form,
+    headers: {
+      Accept: "aplication/json",
+    },
+  });
+  if (response.ok) {
+    this.reset();
+    alert("Gracias por contactarme, te responderé pronto");
+  }
+}
+    </script>
+
+ <!--Boton WhastApp-->   
+<script
+    src="https://kit.fontawesome.com/b9d5d6ef3f.js"
+    crossorigin="anonymous"
+></script>
+ <!--Boton menu-->  
+<script src="js/script.js"></script>
+</body>
+</html>
