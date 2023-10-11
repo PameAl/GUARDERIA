@@ -37,9 +37,9 @@ function post() {
           console.log(json.status);  
 
         if (json.status == 201) {
-          alert("Se cargo el producto!!");
+          alert("Se cargo el alumno!!");
         } else {
-          alert("No se cargo el producto!!");
+          alert("No se cargo el alumno!!");
         }
       })
       .catch((error) => {
@@ -63,24 +63,33 @@ const requestOptions = {
 fetch("https://snp0h1z7-3000.brs.devtunnels.ms/productos", requestOptions)
   .then((response) => response.json())
   .then((data) => {
-    const tablaProductos = document.getElementById("tabla-productos");
+    const tablaProductos = document.getElementById("tabla-alumnos");
     const tbody = tablaProductos.querySelector("tbody");
 
     // Limpia el contenido existente en la tabla
     tbody.innerHTML = "";
 
-    data.forEach((producto) => {
+    data.forEach((alumno) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${producto.id}</td>
-        <td>${producto.nombre}</td>
-        <td>${producto.descripcion}</td>
-        <td>${producto.cantidad}</td>
+        <td>${alumno.id}</td>
+        <td>${alumno.nombre}</td>
+        <td>${alumno.apellido}</td>
+        <td>${alumno.numdoc}</td>
+        <td>${alumno.sexo}</td>
+        <td>${alumno.fechanacimiento}</td>
+        <td>${alumno.lugarnacimiento}</td>
+        <td>${alumno.direccion}</td>
+        <td>${alumno.localidad}</td>
+        <td>${alumno.nombrepadre}</td>
+        <td>${alumno.ocupacion}</td>
+        <td>${alumno.telefono}</td>
+        <td>${alumno.email}</td>
       `;
       tbody.appendChild(row);
     });
   })
   .catch((error) => {
-    console.error("Error al obtener los productos:", error);
+    console.error("Error al obtener los alumnos:", error);
   });
 }

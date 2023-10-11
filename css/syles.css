@@ -817,3 +817,19 @@ h3 {
 .activeline3__bars-menu {
   transform: rotate(-45deg) translate(-4px, 2px);
 }
+
+/**CARGAR DE PRODUCTOS**/
+.formulario_carga{
+  background-color: var(--gris);
+  width: min(
+    60rem,
+    100%
+  ); /**es utilizar el valor mas pequeño- es para darle el tamaño al formulario*/
+  margin: 0 auto; /* se usa para centrar cuando no tenes un display-flex y seo un tipo de elemento block*/
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario tr {
+  border: none;
+}

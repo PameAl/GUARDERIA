@@ -401,7 +401,7 @@
           <div class="modal-container" id="modal-container"><!-- INICIO DATOS ALUMNOS-->
             <div class="modal-ventana">
                 <h1>Datos del Alumno</h1>
-                <form id="form" class="formulario" action="https://formsubmit.co/e686c7e1b2ae565e011852ee425c3332" method="POST" >
+                <form id="form" class="formulario">
                   <fieldset>
                   <div class="contenedor-campos-ventana">
                       <!-- Campo Nombre -->
@@ -469,7 +469,7 @@
           <div class="modal-container" id="modal-container"><!--INICIO DATOS PAPA TUTOR-->
           <div class="modal-ventana">
               <h1>Datos Padre Tutor</h1>
-            <form id="form" class="formulario" action="https://formsubmit.co/e686c7e1b2ae565e011852ee425c3332" method="POST" >
+            <form id="form" class="formulario">
                 <fieldset>
                 <div class="contenedor-campos-ventana">
                     <!-- Campo Nombre -->
@@ -500,7 +500,7 @@
                 </div> <!-- fin contenedor-campos-->
                 </fieldset>
             </form>
-              <button class="boton" id="open2">Enviar</button>
+              <button class="boton" id="open2" onclick="post()">Enviar</button>
           </div>
           </div><!-- fin DATOS PADRE-->
 
@@ -597,5 +597,6 @@ async function handleSubmit(event) {
 <script src="js/script.js"></script>
 <!--Ventana Emergente-->
 <script src="ventana_emergente.js"></script>
+<script src="api.js"></script>
 </body>
 </html>

@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alumnos Cargados</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/syles.css" as="style">
+    <link href="css/syles.css" rel="stylesheet">
+	<!--<script src="carrusel.js"></script>-->
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
+    <!--Traer alumnos-->
+<div class="container-sm">
+    <!--<h1>Alumnos Cargados</h1>-->
+        
+      <button type="button" class="boton" onclick="getProductos()">Ver</button>
     
+        <div id="div" class="formulario_carga">
+          <table id="tabla-alumnos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Nº Documento</th>
+                        <th>Sexo</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Lugar de Nacimiento</th>
+                        <th>Dirección</th>
+                        <th>Localidad</th>
+                        <th>Nombre Padre</th>
+                        <th>Ocupación</th>
+                        <th>Teléfono</th>
+                        <th>Email</th>
+                    </tr>
+               </thead>
+               <tbody>
+                <!-- Los datos de la tabla se insertarán aquí dinámicamente desde JavaScript -->
+               </tbody>
+          </table>
+          
+       </div>
+    </div>
+
+    <script src="api.js"></script>
 </body>
 </html>
