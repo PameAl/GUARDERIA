@@ -4,6 +4,7 @@ const open1 = document.getElementById('open1');
 const open2 = document.getElementById('open2');
 const close = document.getElementById('close');
 
+
 open.addEventListener('click', () => {
   modal_containers[0].classList.add('show'); // Abre la primera ventana emergente
 });
@@ -29,3 +30,4 @@ close.addEventListener('click', () => {
  $(function() {
     $("#fecha_nacimiento").datepicker();
 });
+

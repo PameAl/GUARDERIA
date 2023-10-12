@@ -18,39 +18,72 @@
     <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-    <!--Traer alumnos-->
-<div class="container-sm">
-    <!--<h1>Alumnos Cargados</h1>-->
-        
-      <button type="button" class="boton" onclick="getProductos()">Ver</button>
-    
-        <div id="div" class="formulario_carga">
-          <table id="tabla-alumnos">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Nº Documento</th>
-                        <th>Sexo</th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>Lugar de Nacimiento</th>
-                        <th>Dirección</th>
-                        <th>Localidad</th>
-                        <th>Nombre Padre</th>
-                        <th>Ocupación</th>
-                        <th>Teléfono</th>
-                        <th>Email</th>
-                    </tr>
-               </thead>
-               <tbody>
-                <!-- Los datos de la tabla se insertarán aquí dinámicamente desde JavaScript -->
-               </tbody>
-          </table>
-          
-       </div>
-    </div>
 
+    <header><!--MENU-->
+        <div class="container__menu">
+          <div class="logo">
+            <h1 class="titulo footer">"Pequeños Tesoros"<span>Guardería</span></h1>
+          </div>
+          <div class="menu">
+            <i class="fas fa-bars" id="btn_menu"></i>
+            <div id="back_menu"></div>
+            <nav id="nav">
+              <ul>
+                <li><a href="index.html" id="selected">Inicio</a></li>
+                <li><a href="#MiServicios">Servicios</a></li>
+                <li><a href="#Testimonios">Testimonios</a></li>
+                <li><a href="#Galeria">Galeria</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero-carga" id="Inicio">
+        <div class="contenido-hero-carga">
+            <h2 class="titulo">"Un lugar de ternura y descubrimiento"</h2>
+          </div>
+            
+        </div>
+
+        
+      </section>    
+
+      <main class="contenedor sombra"> 
+            <!--Traer alumnos-->
+            <div class="container-sm">
+                <h1>Alumnos Cargados</h1>
+                    
+                <button type="button" class="boton" onclick="getProductos()">Ver</button>
+                
+                    <div id="div" class="formulario_carga">
+                    <table id="tabla-alumnos">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Nº Documento</th>
+                                    <th>Sexo</th>
+                                    <th>Fecha de Nacimiento</th>
+                                    <th>Lugar de Nacimiento</th>
+                                    <th>Dirección</th>
+                                    <th>Localidad</th>
+                                    <th>Nombre Padre</th>
+                                    <th>Ocupación</th>
+                                    <th>Teléfono</th>
+                                    <th>Email</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los datos de la tabla se insertarán aquí dinámicamente desde JavaScript -->
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+      </main>
     <script src="api.js"></script>
 </body>
 </html>

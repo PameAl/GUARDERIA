@@ -819,17 +819,76 @@ h3 {
 }
 
 /**CARGAR DE PRODUCTOS**/
-.formulario_carga{
-  background-color: var(--gris);
-  width: min(
-    60rem,
-    100%
-  ); /**es utilizar el valor mas pequeño- es para darle el tamaño al formulario*/
-  margin: 0 auto; /* se usa para centrar cuando no tenes un display-flex y seo un tipo de elemento block*/
-  padding: 2rem;
-  border-radius: 1rem;
+.hero-carga {
+  background-image: url(../img/actividades3.webp);
+  background-repeat: no-repeat; /*con esta propiedad la imagen no se repite por defaul*/
+  background-size: cover; /*la imagen cubre toda la pantalla*/
+  height: 350px;
+  position: relative;
+  margin-bottom: 2rem; /*para separar la imagen de el cuadro que le sigue*/
+
 }
 
-.formulario tr {
+.contenido-hero-carga{
+  position: absolute;
+  background-color: rgba(0, 0, 0,.5);/*ejemplo*/
+  background-color: rgb(0 0 0 / 70%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;/*sirve para ocultar los elementos que estan fuera del padre*/  
+  /*animation: cambio 20s infinite;*/
+
+  display: flex; /*este bloque de codigo permite alinear verticalmente y centrado*/
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 10px 20px;
   border: none;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.formulario_carga {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--blanco);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tabla-alumnos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tabla-alumnos th, #tabla-alumnos td {
+  border: 1px solid var(--blanco);
+  padding: 8px;
+  text-align: left;
+}
+
+#tabla-alumnos th {
+  background-color: var(--gris);
+  color: var(--blanco);
+}
+
+#tabla-alumnos tbody tr:nth-child(odd) {
+  background-color: var(--blanco);
+}
+
+#tabla-alumnos tbody tr:hover {
+  background-color: var(--blanco);
 }
