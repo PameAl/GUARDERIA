@@ -46,50 +46,50 @@ function post() {
         console.log("error", error);
       });
   }
+
 //Método GET
 function getProductos() {
-// var requestOptions = {
-//   method: "GET",
-//   redirect: "follow",
 
-// };
-const requestOptions = {
-  method: "GET",
-  headers: {
-      "Content-Type": "application/json"
-  },
-  redirect: "follow",
+  const requestOptions = {
+    method: "GET",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    redirect: "follow",
 };
-fetch("https://snp0h1z7-3000.brs.devtunnels.ms/productos", requestOptions)
-  .then((response) => response.json())
-  .then((data) => {
-    const tablaProductos = document.getElementById("tabla-alumnos");
-    const tbody = tablaProductos.querySelector("tbody");
+  fetch("https://snp0h1z7-4000.brs.devtunnels.ms/alumnos", requestOptions)
+    .then((response) => response.json())
+    .then((data) => {
+      
+      const tablaProductos = document.getElementById("tabla-alumnos");
+      const tbody = tablaProductos.querySelector("tbody");
 
-    // Limpia el contenido existente en la tabla
-    tbody.innerHTML = "";
+      // Limpia el contenido existente en la tabla
+      tbody.innerHTML = "";
 
-    data.forEach((alumno) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-        <td>${alumno.id}</td>
-        <td>${alumno.nombre}</td>
-        <td>${alumno.apellido}</td>
-        <td>${alumno.numdoc}</td>
-        <td>${alumno.sexo}</td>
-        <td>${alumno.fechanacimiento}</td>
-        <td>${alumno.lugarnacimiento}</td>
-        <td>${alumno.direccion}</td>
-        <td>${alumno.localidad}</td>
-        <td>${alumno.nombrepadre}</td>
-        <td>${alumno.ocupacion}</td>
-        <td>${alumno.telefono}</td>
-        <td>${alumno.email}</td>
-      `;
-      tbody.appendChild(row);
+      data[0].forEach((alumno) => {
+ 
+        const row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${alumno.Id_Alumno}</td>
+        <td>${alumno.Nombre}</td>
+        <td>${alumno.Apellido}</td>
+        <td>${alumno.Num_Documento}</td>
+        <td>${alumno.Sexo}</td>
+        <td>${alumno.Fecha_de_nacimiento}</td>
+        <td>${alumno.Lugar_nacimiento}</td>
+        <td>${alumno.Direccion}</td>
+        <td>${alumno.Localidad}</td>
+        <td>${alumno.Nombre_apellido_Padre}</td>
+        <td>${alumno.Ocupacion}</td>
+        <td>${alumno.Telefono}</td>
+        <td>${alumno.Email}</td>
+        `;
+        console.log(alumno)
+        tbody.appendChild(row);
+      });
+    })
+    .catch((error) => {
+      console.error("Error al obtener los alumnos:", error);
     });
-  })
-  .catch((error) => {
-    console.error("Error al obtener los alumnos:", error);
-  });
 }
