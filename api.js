@@ -1,42 +1,51 @@
+const RutaApi = "https://snp0h1z7-3000.brs.devtunnels.ms"
+
 //Método POST
 function post() {
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let numdoc = document.getElementById("num-doc").value;
-    let sexo = document.getElementById("sexo").value;
-    let fechanacimiento = document.getElementById("fecha_nacimiento").value;
-    let lugarnacimiento = document.getElementById("lugar_nacimiento").value;
-    let direccion = document.getElementById("direccion").value;
-    let localidad = document.getElementById("localidad").value;
-    let nombrepadre = document.getElementById("nombre_padre").value;
-    let ocupacion = document.getElementById("ocupacion").value;
-    let telefono = document.getElementById("telefono").value;
-    let email = document.getElementById("email").value;
+    let Nombre = document.getElementById("Nombre").value;
+    let Apellido = document.getElementById("Apellido").value;
+    let Num_Documento = document.getElementById("Num-doc").value;
+    let Sexo = document.getElementById("Sexo").value;
+    let Fecha_de_nacimiento = document.getElementById("Fecha_nacimiento").value;
+    let Lugar_nacimiento = document.getElementById("Lugar_nacimiento").value;
+    let Direccion = document.getElementById("Direccion").value;
+    let Localidad = document.getElementById("Localidad").value;
+    let Nombre_apellido_Padre = document.getElementById("Nombre_padre").value;
+    let Ocupacion = document.getElementById("Ocupacion").value;
+    let Telefono = document.getElementById("Telefono").value;
+    let Email = document.getElementById("Email").value;
 
-    const formData = new FormData();
-    formData.append("nombre", nombre);
-    formData.append("apellido", apellido);
-    formData.append("num-doc", numdoc);
-    formData.append("sexo", sexo);
-    formData.append("fecha_nacimiento", fechanacimiento);
-    formData.append("lugar_nacimiento", lugarnacimiento);
-    formData.append("direccion", direccion);
-    formData.append("localidad", localidad);
-    formData.append("nombre_padre", nombrepadre);
-    formData.append("ocupacion", ocupacion);
-    formData.append("telefono", telefono);
-    formData.append("email", email);
+    const data = JSON.stringify({
+      Nombre,
+      Apellido,
+      Num_Documento,
+      Sexo,
+      Fecha_de_nacimiento,
+      Lugar_nacimiento,
+      Direccion,
+      Localidad,
+      Nombre_apellido_Padre,
+      Ocupacion,
+      Telefono,
+      Email
+   });
+  
+     const requestOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: data,
+        redirect: "follow"
+     };
 
-    fetch("https://snp0h1z7-3000.brs.devtunnels.ms/productos", {
-      method: "POST",
-      body: formData,
-    })
+    fetch(`${RutaApi}/alumnos`, requestOptions)
       .then((response) => response.json())
       .then((json) => {
           console.log(json);
           console.log(json.status);  
 
-        if (json.status == 201) {
+        if (json.status === 201) {
           alert("Se cargo el alumno!!");
         } else {
           alert("No se cargo el alumno!!");
@@ -57,7 +66,7 @@ function getProductos() {
     },
     redirect: "follow",
 };
-  fetch("https://snp0h1z7-4000.brs.devtunnels.ms/alumnos", requestOptions)
+  fetch(`${RutaApi}/alumnos`, requestOptions)
     .then((response) => response.json())
     .then((data) => {
       
