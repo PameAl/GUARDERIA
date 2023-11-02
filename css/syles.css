@@ -905,3 +905,22 @@ h3 {
 #tabla-alumnos tbody tr:hover {
   background-color: var(--blanco);
 }
+
+.regreso_icons{
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  margin-right: 10px;
+  background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));/*transparente*/
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+
+.regreso_icon:hover {
+  color: var(--blanco);
+  transform: scale(2);
+}
