@@ -145,6 +145,15 @@ h3 {
   margin: 0 auto;
 }
 
+.contenedor-almun {
+  max-width: 128rem;
+  /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; *este codigo es lo mismo que el codigo margin solo*/
+  margin: 0 auto;
+}
+
 /*Navegacion Principal*/
 .nav-bg {
   background-color: var(--secundario);
