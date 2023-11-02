@@ -544,8 +544,8 @@ h3 {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin: 50px auto; /* Cambiado para centrar horizontalmente */
-  margin-top: 0px;
+  margin: 60px auto; /* Cambiado para centrar horizontalmente */
+  margin-top: 150px;
 }
 
 .modal-ventana h1 {
@@ -557,6 +557,10 @@ h3 {
   font-size: 14px;
 }
 @media (min-width: 768px) {
+
+  .modal-ventana{
+    margin-top: 220px;
+  }
   .modal-ventana .contenedor-campos-ventana {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

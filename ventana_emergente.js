@@ -11,13 +11,13 @@ open.addEventListener('click', () => {
 
 open1.addEventListener('click', () => {
   modal_containers[0].classList.remove('show'); // Cierra la primera ventana emergente
-  modal_containers[1].classList.add('show'); // Abre la segunda ventana emergente
+  //modal_containers[1].classList.add('show'); // Abre la segunda ventana emergente
 });
 
-open2.addEventListener('click', () => {
-  modal_containers[1].classList.remove('show'); // Cierra la segunda ventana emergente
-  modal_containers[2].classList.add('show'); // Abre la tercera ventana emergente
-});
+//open2.addEventListener('click', () => {
+ // modal_containers[1].classList.remove('show'); // Cierra la segunda ventana emergente
+  //modal_containers[2].classList.add('show'); // Abre la tercera ventana emergente
+//});
 
 close.addEventListener('click', () => {
   modal_containers.forEach((container) => {
@@ -27,7 +27,5 @@ close.addEventListener('click', () => {
 
 
 //funcion para cargar almanaque
- $(function() {
-    $("#fecha_nacimiento").datepicker();
-});
+
 
