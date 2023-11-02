@@ -1,4 +1,4 @@
-const RutaApi = "https://snp0h1z7-3000.brs.devtunnels.ms"
+const RutaApi = "https://snp0h1z7-4000.brs.devtunnels.ms"
 
 //Método POST
 function post() {

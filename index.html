@@ -442,68 +442,54 @@
                       <!-- Campo Lugar de Nacimiento -->
                       <div class="campo_ventana">
                         <label for="lugar_nacimiento">Lugar de Nacimiento<span>*</span></label>
-                        <input class="input-text" type="text" id="lugar_nacimiento" name="Lugar_nacimiento" required placeholder="Lugar de Nacimiento">
+                        <input class="input-text" type="text" id="Lugar_nacimiento" name="Lugar_nacimiento" required placeholder="Lugar de Nacimiento">
                       </div>
 
                       <!-- Campo Dirección -->
                       <div class="campo_ventana">
                         <label for="direccion">Dirección<span>*</span></label>
-                        <input class="input-text" type="text" id="direccion" name="Direccion" required placeholder="Dirección">
+                        <input class="input-text" type="text" id="Direccion" name="Direccion" required placeholder="Dirección">
                       </div>
 
                       <!-- Campo Localidad -->
                       <div class="campo_ventana">
                         <label for="localidad">Localidad<span>*</span></label>
-                        <input class="input-text" type="text" id="localidad" name="Localidad" required placeholder="Localidad">
+                        <input class="input-text" type="text" id="Localidad" name="Localidad" required placeholder="Localidad">
+                      </div>
+
+                      <!-- Campo Nombre Padre -->
+                      <div class="campo_padres">
+                        <label for="name">Nombre/s y Apellido/s<span>*</span></label>
+                        <input class="input-text" name="name"  type="text" id="Nombre_padre" required placeholder="Nombre/s y Apeliido/s">
+                      </div>
+
+                      <!-- Campo ocupación -->
+                      <div class="campo_padres">
+                        <label for="ocupacion">Ocupación<span>*</span></label>
+                        <input class="input-text" type="text" id="Ocupacion" name="Ocupacion" required placeholder="Ocupación">
+                      </div>
+
+                      <!-- Campo Teléfono -->
+                      <div class="campo_padres">
+                        <label for="telefono">Teléfono<span>*</span></label>
+                        <input class="input-text" type="text" id="Telefono" name="Telefono" required placeholder="Teléfono">
+                      </div>
+
+                       <!-- Campo Email -->
+                      <div class="campo_padres">
+                        <label for="email">Email<span>*</span></label>
+                        <input class="input-text" type="text" id="Email" name="Email" required placeholder="Email">
                       </div>
 
                       <legend>*Llenar todos los campos</legend>
                   </div> <!-- fin contenedor-campos-->
                   </fieldset>
               </form>
-                <button class="boton" id="open1">Continuar</button>
+                <button class="boton" id="open1" onclick="post()">Enviar</button>
                 <button class="boton" id="close">Cerrar</button>
             </div>
         
           </div><!-- fin DATOS ALUMNOS-->
-           
-          <div class="modal-container" id="modal-container"><!--INICIO DATOS PAPA TUTOR-->
-          <div class="modal-ventana">
-              <h1>Datos Padre Tutor</h1>
-            <form id="form" class="formulario">
-                <fieldset>
-                <div class="contenedor-campos-ventana">
-                    <!-- Campo Nombre -->
-                    <div class="campo_padres">
-                        <label for="name">Nombre/s y Apellido/s<span>*</span></label>
-                        <input class="input-text" name="name"  type="text" id="Nombre_padre" required placeholder="Nombre/s y Apeliido/s">
-                    </div>
-
-                     <!-- Campo ocupación -->
-                    <div class="campo_padres">
-                      <label for="ocupacion">Ocupación<span>*</span></label>
-                      <input class="input-text" type="text" id="ocupacion" name="Ocupacion" required placeholder="Ocupación">
-                    </div>
-
-                    <!-- Campo Teléfono -->
-                    <div class="campo_padres">
-                        <label for="telefono">Teléfono<span>*</span></label>
-                        <input class="input-text" type="text" id="telefono" name="Telefono" required placeholder="Teléfono">
-                    </div>
-
-                    <!-- Campo Email -->
-                    <div class="campo_padres">
-                        <label for="email">Email<span>*</span></label>
-                        <input class="input-text" type="text" id="email" name="Email" required placeholder="Email">
-                    </div>
-
-                    <legend>*Llenar todos los campos</legend>
-                </div> <!-- fin contenedor-campos-->
-                </fieldset>
-            </form>
-              <button class="boton" id="open2" onclick="post()">Enviar</button>
-          </div>
-          </div><!-- fin DATOS PADRE-->
 
         </section><!--Fin Preinscripcion alumno-->
 
@@ -560,34 +546,7 @@
         <small>&copy; 2023 <b>Pamela</b> - Todos los Derechos Reservados.</small>
     </div>
 </footer><!--Fin Pie de pagina-->
- 
 
-
-<!--<script src="carrusel.js"></script>-->
-
-<!--Enviar datod de formulario
-<script>
- const $form = document.querySelector("#form");
-const $buttonMailto = document.querySelector("#form");
-
-$form.addEventListener("submit", handleSubmit);
-
-async function handleSubmit(event) {
-  event.preventDefault();
-  const form = new FormData(this);
-  const response = await fetch(this.action, {
-    method: this.method,
-    body: form,
-    headers: {
-      Accept: "aplication/json",
-    },
-  });
-  if (response.ok) {
-    this.reset();
-    alert("Gracias por contactarme, te responderé pronto");
-  }
-}
-    </script>-->
 
  <!--Boton WhastApp-->   
 <script
