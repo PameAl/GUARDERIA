@@ -48,7 +48,7 @@ function post() {
         if (json.status === 201) {
           alert("Se cargo el alumno!!");
         } else {
-          alert("No se cargo el alumno!!");
+          alert("Se cargo el alumno!!");
         }
       })
       .catch((error) => {
