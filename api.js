@@ -45,11 +45,14 @@ function post() {
           console.log(json);
           console.log(json.status);  
 
-        if (json.status === 201) {
-          alert("Se cargo el alumno!!");
-        } else {
-          alert("Se cargo el alumno!!");
-        }
+          if (json.status === 201) {
+            alert("Se cargó el alumno!!");
+            // También puedes acceder a la información del producto
+            console.log(json.data);
+          } else {
+            alert("No se cargó el alumno!!");
+            console.log(json.message);
+          } 
       })
       .catch((error) => {
         console.log("error", error);
